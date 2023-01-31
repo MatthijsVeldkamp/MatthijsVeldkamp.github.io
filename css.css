@@ -1,4 +1,9 @@
-
+li {
+	color: rgb(0, 0, 237);
+}
+body {
+	color: rgb(30, 30, 30);;
+}
 #logo{ 
 	position:absolute; 
 	bottom:0; 
@@ -102,6 +107,7 @@ input {
 	color: black;
   }
   
+  
   .menu ul li a {
 	display: block;
 	color: white;
@@ -113,7 +119,7 @@ input {
   }
   
   .menu ul li a:hover {
-	color: #00ff40;
+	color: #00ff4000;
   }
   
   .menu ul li:hover {
@@ -168,4 +174,3 @@ input {
   #menuToggle:not(:checked) ~ .menuEffects ul {
 	transform: translateY(-30%);
   }
-  
