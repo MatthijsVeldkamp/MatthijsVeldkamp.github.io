@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.shop{
+    display: none;
+}
+.shopbtn{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.shopbtn:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.backbtn{
+    display: none;
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.backbtn:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.container .btn1
+{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .btn4
+{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .btn1:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.container .btn2:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.container .btn3:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.container .btn4:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.container .balance p
+{
+    font-size: 25px;
+    font-weight: 500;
+}
+.container .btn2
+{
+    display: block;
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .btn3
+{
+    display: block;
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+body
+{
+    background-color: #464646;
+}
+.container
+{
+    height: 500px;
+    width: 500px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    margin: 300px auto auto;
+}
+.container p
+{
+    display: block;
+    font-size: 55px;
+    text-align: center;
+}
