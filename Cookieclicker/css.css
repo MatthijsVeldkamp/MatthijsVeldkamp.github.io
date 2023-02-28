@@ -5,8 +5,50 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+.system .savebtn{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #00ff2f;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.system .savebtn:hover
+{
+    transform: translateY(-10px);
+    font-weight: 600;
+}
+.system .deletebtn{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: #ff0000;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.system .deletebtn:hover
+{
+    transform: translateY(-10px);
+    font-weight: 600;
+}
 .shop{
     display: none;
+}
+.system{
+    display: none;
+}
+.systembtn{
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.systembtn:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
 }
 .shopbtn{
     margin-top: 15px;
@@ -30,6 +72,20 @@
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .backbtn:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.backbtn2{
+    display: none;
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.backbtn2:hover
 {
     transform: translateY(-10px);
     color: #00ff2a;
@@ -104,6 +160,7 @@ body
 }
 .container
 {
+    display: block;
     height: 500px;
     width: 500px;
     background-color: #ffffff;

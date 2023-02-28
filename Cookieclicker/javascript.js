@@ -1,9 +1,53 @@
-let cookies = 0
-let amount = 1
-let cookieprice = 1
-let price = 20
-let autoclickers = 0
-let balance = 0
+let cookies = parseInt((localStorage.getItem('amtofcookies')));
+cookies = String(cookies)
+if (cookies == "NaN")
+{
+    localStorage.setItem('amtofcookies',"0")
+    location.reload();
+}
+else{
+    cookies = parseInt(cookies)
+}
+let amount = parseInt((localStorage.getItem('amount')));
+amount = String(amount)
+if (amount == "NaN")
+{
+    localStorage.setItem('amount',"1")
+    location.reload();
+}
+else{
+    amount = parseInt(amount)
+}
+let cookieprice = parseFloat((localStorage.getItem('cookieprice')));
+cookieprice = String(cookieprice)
+if (cookieprice == "NaN")
+{
+    localStorage.setItem('cookieprice',"1")
+    location.reload();
+}
+else{
+    cookieprice = parseFloat(cookieprice)
+}
+let price = parseFloat((localStorage.getItem('price')));
+price = String(price)
+if (price == "NaN")
+{
+    localStorage.setItem('price',"20")
+    location.reload();
+}
+else{
+    price = parseFloat(price)
+}
+let balance = parseFloat((localStorage.getItem('balance')));
+balance = String(balance)
+if (balance == "NaN")
+{
+    localStorage.setItem('balance',"0")
+    location.reload();
+}
+else{
+    balance = parseFloat(balance)
+}
 const audio = new Audio("click.mp3");
 const money = new Audio("money.mp3")
 const error = new Audio("error.mp3")
@@ -11,6 +55,25 @@ const buttons = document.querySelectorAll("button");
 document.getElementById("btn").disabled = true;
 document.getElementById("btn3").disabled = true;
 updatetitle()
+function save()
+{
+    localStorage.setItem('amtofcookies', cookies)
+    localStorage.setItem('amount',amount)
+    localStorage.setItem('cookieprice',cookieprice)
+    localStorage.setItem('price',price)
+    localStorage.setItem('balance',balance)
+    alert("Game saved!")
+}
+function deletesave()
+{
+    localStorage.setItem('amtofcookies',"0")
+    localStorage.setItem('amount',"1")
+    localStorage.setItem('cookieprice',"1")
+    localStorage.setItem('price',"20")
+    localStorage.setItem('balance',"0")
+    alert("Save deleted!")
+    location.reload();
+}
 function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
 }
@@ -32,6 +95,7 @@ function decreaseprice()
 function showshop()
 {
     audio.play();
+    document.getElementById("systembtn").style.display = "none"
     document.getElementById("shop").style.display = "block"
     document.getElementById("btn").style.display = "block"
     document.getElementById("btn1").style.display = "none"
@@ -40,7 +104,33 @@ function showshop()
     document.getElementById("shopbtn").style.display = "none"
     document.getElementById("backbtn").style.display = "block"
 }
+function showsystem()
+{
+    audio.play();
+    document.getElementById("shop").style.display = "none"
+    document.getElementById("btn").style.display = "none"
+    document.getElementById("btn1").style.display = "none"
+    document.getElementById("btn3").style.display = "none"
+    document.getElementById("antwoord").style.display = "none"
+    document.getElementById("shopbtn").style.display = "none"
+    document.getElementById("systembtn").style.display = "none"
+    document.getElementById("backbtn").style.display = "none"
+    document.getElementById("backbtn2").style.display = "block"
+    document.getElementById("system").style.display = "block"
+}
 function back()
+{
+    audio.play();
+    document.getElementById("systembtn").style.display = "block"
+    document.getElementById("shop").style.display = "none"
+    document.getElementById("btn").style.display = "none"
+    document.getElementById("btn1").style.display = "block"
+    document.getElementById("btn3").style.display = "none"
+    document.getElementById("antwoord").style.display = "block"
+    document.getElementById("shopbtn").style.display = "block"
+    document.getElementById("backbtn").style.display = "none"
+}
+function backfromsystem()
 {
     audio.play();
     document.getElementById("shop").style.display = "none"
@@ -49,7 +139,10 @@ function back()
     document.getElementById("btn3").style.display = "none"
     document.getElementById("antwoord").style.display = "block"
     document.getElementById("shopbtn").style.display = "block"
+    document.getElementById("systembtn").style.display = "block"
     document.getElementById("backbtn").style.display = "none"
+    document.getElementById("backbtn2").style.display = "none"
+    document.getElementById("system").style.display = "none"
 }
 function check()
 {
@@ -128,7 +221,7 @@ function updatetitle()
         document.getElementById("antwoord").innerText += "You have "+String(kFormatter(cookies))+" Cookies.";
     }
     document.getElementById("antwoord2").innerHTML = "";
-    document.getElementById("antwoord2").innerText += "Balance: "+String(kFormatter(balance.toFixed(2)))+" $.";
+    document.getElementById("antwoord2").innerText += "Balance: "+String(kFormatter(balance.toFixed(2)))+"$.";
     let title = String(kFormatter(cookies)) + " Cookies";
     document.title = title;
 }
