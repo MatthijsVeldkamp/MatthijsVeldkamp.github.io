@@ -13,6 +13,25 @@
     background-color: #00ff2f;
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
+.container .sound2{
+    display: none;
+    margin-top: 15px;
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background-color: #000000;
+    color: #fff;
+    transform: rotate(-5deg);
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.container .settings{
+    display: none;
+}
+.container .sound2:hover
+{
+    transform: rotate(0deg);
+    font-weight: 600;
+}
 .system .savebtn:hover
 {
     transform: translateY(-10px);
@@ -86,6 +105,20 @@
     transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .backbtn2:hover
+{
+    transform: translateY(-10px);
+    color: #00ff2a;
+    background-color: #878787;
+}
+.backbtn3{
+    display: none;
+    margin-top: 15px;
+    width: 400px;
+    height: 50px;
+    border-radius: 10px;
+    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+.backbtn3:hover
 {
     transform: translateY(-10px);
     color: #00ff2a;
