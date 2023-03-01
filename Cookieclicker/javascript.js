@@ -62,11 +62,7 @@ function save()
     localStorage.setItem('cookieprice',cookieprice)
     localStorage.setItem('price',price)
     localStorage.setItem('balance',balance)
-}
-function alertsave()
-{
-    save()
-    alert("Game saved!"
+    alert("Game saved!")
 }
 function deletesave()
 {
@@ -164,7 +160,6 @@ function check()
     }else{
         document.getElementById("btn3").disabled = true;
     }
-    save()
 }
 function addcookie()
 {
@@ -229,5 +224,4 @@ function updatetitle()
     document.getElementById("antwoord2").innerText += "Balance: "+String(kFormatter(balance.toFixed(2)))+"$.";
     let title = String(kFormatter(cookies)) + " Cookies";
     document.title = title;
-    save()
 }
