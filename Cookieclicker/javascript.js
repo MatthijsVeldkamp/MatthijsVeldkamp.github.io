@@ -78,7 +78,7 @@ function save()
     localStorage.setItem('balance',balance)
     if (notificationpermission == true)
     {
-        showNotification("Cookieclicker","Game saved!");
+        showNotification("Cookieclicker","Game saved!","https://famouscookies.com/wp-content/uploads/2020/11/Famous-Cookie-Cocolate-Chip-21-2.png");
     }else{
         alert("Game saved!")
     }
@@ -94,7 +94,7 @@ function deletesave()
     localStorage.setItem('balance',"0")
     if (notificationpermission == true)
     {
-        showNotification("Cookieclicker","Save deleted!");
+        showNotification("Cookieclicker","Save deleted!","https://famouscookies.com/wp-content/uploads/2020/11/Famous-Cookie-Cocolate-Chip-21-2.png");
     }else{
         alert("Save deleted!")
     }
