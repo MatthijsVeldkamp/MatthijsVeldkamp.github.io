@@ -65,8 +65,8 @@ function save()
 }
 function alertsave()
 {
-    alert("Game saved!"
     save()
+    alert("Game saved!"
 }
 function deletesave()
 {
