@@ -1,3 +1,17 @@
+let notificationpermission = false;
+if (Notification.permission === "granted") {
+   notificationpermission = true;
+} else if (Notification.permission !== "denied") {
+   Notification.requestPermission().then(permission => {
+    notificationpermission = false;
+   });
+}
+function showNotification(title2, body2, icon2) {
+    const notification = new Notification(title2, {
+       body: body2,
+       icon: icon2
+    })
+ }
 let cookies = parseInt((localStorage.getItem('amtofcookies')));
 cookies = String(cookies)
 if (cookies == "NaN")
@@ -62,7 +76,9 @@ function save()
     localStorage.setItem('cookieprice',cookieprice)
     localStorage.setItem('price',price)
     localStorage.setItem('balance',balance)
-    alert("Game saved!")
+    showNotification("Cookieclicker","Game saved!");
+    location.reload();
+    
 }
 function deletesave()
 {
@@ -71,7 +87,7 @@ function deletesave()
     localStorage.setItem('cookieprice',"1")
     localStorage.setItem('price',"20")
     localStorage.setItem('balance',"0")
-    alert("Save deleted!")
+    showNotification("Cookieclicker","Save deleted!");
     location.reload();
 }
 function kFormatter(num) {
@@ -222,6 +238,12 @@ function updatetitle()
     }
     document.getElementById("antwoord2").innerHTML = "";
     document.getElementById("antwoord2").innerText += "Balance: "+String(kFormatter(balance.toFixed(2)))+"$.";
-    let title = String(kFormatter(cookies)) + " Cookies";
-    document.title = title;
+    if (cookies == 1)
+    {
+        let title = String(kFormatter(cookies)) + " Cookie";
+        document.title = title;
+    } else{
+        let title = String(kFormatter(cookies)) + " Cookies";
+        document.title = title;
+    }
 }
