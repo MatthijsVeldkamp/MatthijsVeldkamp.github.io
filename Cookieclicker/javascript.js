@@ -62,7 +62,11 @@ function save()
     localStorage.setItem('cookieprice',cookieprice)
     localStorage.setItem('price',price)
     localStorage.setItem('balance',balance)
-    alert("Game saved!")
+}
+function alertsave()
+{
+    alert("Game saved!"
+    save()
 }
 function deletesave()
 {
