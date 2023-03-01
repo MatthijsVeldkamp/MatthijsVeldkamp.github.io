@@ -1,17 +1,3 @@
-let notificationpermission = false;
-if (Notification.permission === "granted") {
-   notificationpermission = true;
-} else if (Notification.permission !== "denied") {
-   Notification.requestPermission().then(permission => {
-    notificationpermission = false;
-   });
-}
-function showNotification(title2, body2, icon2) {
-    const notification = new Notification(title2, {
-       body: body2,
-       icon: icon2
-    })
- }
 let cookies = parseInt((localStorage.getItem('amtofcookies')));
 cookies = String(cookies)
 if (cookies == "NaN")
@@ -76,12 +62,7 @@ function save()
     localStorage.setItem('cookieprice',cookieprice)
     localStorage.setItem('price',price)
     localStorage.setItem('balance',balance)
-    if (notificationpermission == true)
-    {
-        showNotification("Cookieclicker","Game saved!","https://famouscookies.com/wp-content/uploads/2020/11/Famous-Cookie-Cocolate-Chip-21-2.png");
-    }else{
-        alert("Game saved!")
-    }
+    alert("Game saved!")
     location.reload();
     
 }
@@ -92,12 +73,7 @@ function deletesave()
     localStorage.setItem('cookieprice',"1")
     localStorage.setItem('price',"20")
     localStorage.setItem('balance',"0")
-    if (notificationpermission == true)
-    {
-        showNotification("Cookieclicker","Save deleted!","https://famouscookies.com/wp-content/uploads/2020/11/Famous-Cookie-Cocolate-Chip-21-2.png");
-    }else{
-        alert("Save deleted!")
-    }
+    alert("Save deleted!")
     location.reload();
 }
 function kFormatter(num) {
