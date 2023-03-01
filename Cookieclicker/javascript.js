@@ -76,7 +76,12 @@ function save()
     localStorage.setItem('cookieprice',cookieprice)
     localStorage.setItem('price',price)
     localStorage.setItem('balance',balance)
-    showNotification("Cookieclicker","Game saved!");
+    if (notificationpermission == true)
+    {
+        showNotification("Cookieclicker","Game saved!");
+    }else{
+        alert("Game saved!")
+    }
     location.reload();
     
 }
@@ -87,7 +92,12 @@ function deletesave()
     localStorage.setItem('cookieprice',"1")
     localStorage.setItem('price',"20")
     localStorage.setItem('balance',"0")
-    showNotification("Cookieclicker","Save deleted!");
+    if (notificationpermission == true)
+    {
+        showNotification("Cookieclicker","Save deleted!");
+    }else{
+        alert("Save deleted!")
+    }
     location.reload();
 }
 function kFormatter(num) {
