@@ -68,13 +68,21 @@ function save()
 }
 function deletesave()
 {
-    localStorage.setItem('amtofcookies',"0")
-    localStorage.setItem('amount',"1")
-    localStorage.setItem('cookieprice',"1")
-    localStorage.setItem('price',"20")
-    localStorage.setItem('balance',"0")
-    alert("Save deleted!")
-    location.reload();
+    deletething = String(prompt('Please type "delete" to delete your save.')).toLocaleLowerCase()
+    if (deletething == "delete")
+    {
+        localStorage.setItem('amtofcookies',"0")
+        localStorage.setItem('amount',"1")
+        localStorage.setItem('cookieprice',"1")
+        localStorage.setItem('price',"20")
+        localStorage.setItem('balance',"0")
+        alert("Save deleted!")
+        location.reload();
+    }
+    else{
+        alert("But nothing happended!")
+    }
+    
 }
 function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)

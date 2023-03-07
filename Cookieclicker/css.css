@@ -34,6 +34,7 @@
 }
 .system .savebtn:hover
 {
+    opacity: 100;
     transform: translateY(-10px);
     font-weight: 600;
 }
@@ -43,12 +44,14 @@
     height: 50px;
     border-radius: 10px;
     background-color: #ff0000;
+    opacity: 0;
     transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .system .deletebtn:hover
 {
     transform: translateY(-10px);
     font-weight: 600;
+    opacity: 100;
 }
 .shop{
     display: none;
