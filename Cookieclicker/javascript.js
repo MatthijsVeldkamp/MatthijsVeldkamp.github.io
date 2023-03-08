@@ -80,7 +80,7 @@ function deletesave()
         location.reload();
     }
     else{
-        alert("But nothing happended!")
+        alert("Nothing happended!")
     }
     
 }
