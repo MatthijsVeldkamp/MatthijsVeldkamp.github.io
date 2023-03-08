@@ -160,15 +160,19 @@ function check()
     {
         document.getElementById("btn").disabled = false;
         document.getElementById("btn").style.display = "block"
+        document.getElementById("btn").style.background = "#fff"
     }else{
         document.getElementById("btn").disabled = true;
+        document.getElementById("btn").style.background = "#996666"
     }
     if (cookies > 0)
     {
         document.getElementById("btn3").disabled = false;
         document.getElementById("btn3").style.display = "block"
+        document.getElementById("btn3").style.background = "#fff"
     }else{
         document.getElementById("btn3").disabled = true;
+        document.getElementById("btn3").style.background = "#996666"
     }
 }
 function addcookie()
