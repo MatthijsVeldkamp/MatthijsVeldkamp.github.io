@@ -81,6 +81,7 @@ function deletesave()
     }
     else{
         alert("Nothing happended!")
+        location.reload();
     }
     
 }
