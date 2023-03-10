@@ -1,3 +1,39 @@
+@keyframes shake {
+    0% { transform: translate(1px, 0px) rotate(0deg); }
+    10% { transform: translate(-1px, -0px) rotate(-1deg); }
+    20% { transform: translate(-1px, 1px) rotate(1deg); }
+    30% { transform: translate(1px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -0px) rotate(-1deg); }
+    50% { transform: translate(-1px, 0px) rotate(-1deg); }
+    60% { transform: translate(-1px, 1px) rotate(0deg); }
+    70% { transform: translate(1px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -0px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+  }
+@keyframes opacityanimation{
+    0% {opacity: 0.2;}
+    5% {opacity: 0.2;}
+    10% {opacity: 0.2;}
+    15% {opacity: 0.3;}
+    20% {opacity: 0.4;}
+    25% {opacity: 0.5;}
+    30% {opacity: 0.6;}
+    35% {opacity: 0.7;}
+    40% {opacity: 0.8;}
+    45% {opacity: 0.9;}
+    50% {opacity: 1;}
+    55% {opacity: 0.9;}
+    60% {opacity: 0.8;}
+    65% {opacity: 0.7;}
+    70% {opacity: 0.6;}
+    75% {opacity: 0.5;}
+    80% {opacity: 0.4;}
+    85% {opacity: 0.3;}
+    90% {opacity: 0.2;}
+    95% {opacity: 0.2;}
+    100% {opacity: 0.2;}
+}
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 *{
     margin: 0;
@@ -6,12 +42,13 @@
     font-family: 'Poppins', sans-serif;
 }
 .system .savebtn{
+    font-size: 15px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
     background-color: #00ff2f;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .container .sound2{
     display: none;
@@ -22,7 +59,7 @@
     background-color: #000000;
     color: #fff;
     transform: rotate(-5deg);
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .container .settings{
     display: none;
@@ -34,21 +71,32 @@
 }
 .system .savebtn:hover
 {
+    filter: blur(0px);
+    font-size: 30px;
+    opacity: 100;
     transform: translateY(-10px);
     font-weight: 600;
 }
 .system .deletebtn{
+    animation: opacityanimation 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    animation-iteration-count: infinite;
+    font-size: 15px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
     background-color: #ff0000;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .system .deletebtn:hover
 {
+    filter: blur(0px);
+    animation: shake 0.5s;
+    animation-iteration-count: infinite;
+    font-size: 30px;
     transform: translateY(-10px);
     font-weight: 600;
+    opacity: 100;
 }
 .shop{
     display: none;
@@ -57,38 +105,43 @@
     display: none;
 }
 .systembtn{
+    font-size: 25px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .systembtn:hover
 {
+    font-size: 30px;
     transform: translateY(-10px);
     color: #00ff2a;
     background-color: #878787;
 }
 .shopbtn{
+    font-size: 25px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .shopbtn:hover
 {
+    font-size: 30px;
     transform: translateY(-10px);
     color: #00ff2a;
     background-color: #878787;
 }
 .backbtn{
+    font-size: 25px;
     display: none;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .backbtn:hover
 {
@@ -97,12 +150,13 @@
     background-color: #878787;
 }
 .backbtn2{
+    font-size: 25px;
     display: none;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .backbtn2:hover
 {
@@ -116,32 +170,36 @@
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .backbtn3:hover
 {
+    font-size: 25px;
     transform: translateY(-10px);
     color: #00ff2a;
     background-color: #878787;
 }
 .container .btn1
 {
+    font-size: 15px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .container .btn4
 {
+    font-size: 25px;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .container .btn1:hover
 {
+    font-size: 20px;
     transform: translateY(-10px);
     color: #00ff2a;
     background-color: #878787;
@@ -171,21 +229,23 @@
 }
 .container .btn2
 {
+    font-size: 25px;
     display: block;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 .container .btn3
 {
+    font-size: 20px;
     display: block;
     margin-top: 15px;
     width: 400px;
     height: 50px;
     border-radius: 10px;
-    transition: transform 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+    transition: all 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 body
 {
@@ -202,7 +262,13 @@ body
 }
 .container p
 {
+    margin-top: 50px;
+    font-size: 25px;
     display: block;
     font-size: 55px;
     text-align: center;
+}
+.container .cookies
+{
+    font-size: 50px;
 }

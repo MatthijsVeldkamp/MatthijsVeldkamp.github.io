@@ -68,13 +68,22 @@ function save()
 }
 function deletesave()
 {
-    localStorage.setItem('amtofcookies',"0")
-    localStorage.setItem('amount',"1")
-    localStorage.setItem('cookieprice',"1")
-    localStorage.setItem('price',"20")
-    localStorage.setItem('balance',"0")
-    alert("Save deleted!")
-    location.reload();
+    deletething = String(prompt('Please type "delete" to delete your save.')).toLocaleLowerCase()
+    if (deletething == "delete")
+    {
+        localStorage.setItem('amtofcookies',"0")
+        localStorage.setItem('amount',"1")
+        localStorage.setItem('cookieprice',"1")
+        localStorage.setItem('price',"20")
+        localStorage.setItem('balance',"0")
+        alert("Save deleted!")
+        location.reload();
+    }
+    else{
+        alert("Nothing happended!")
+        location.reload();
+    }
+    
 }
 function kFormatter(num) {
     return Math.abs(num) > 999 ? Math.sign(num)*((Math.abs(num)/1000).toFixed(1)) + 'k' : Math.sign(num)*Math.abs(num)
@@ -152,15 +161,19 @@ function check()
     {
         document.getElementById("btn").disabled = false;
         document.getElementById("btn").style.display = "block"
+        document.getElementById("btn").style.background = "#fff"
     }else{
         document.getElementById("btn").disabled = true;
+        document.getElementById("btn").style.background = "#996666"
     }
     if (cookies > 0)
     {
         document.getElementById("btn3").disabled = false;
         document.getElementById("btn3").style.display = "block"
+        document.getElementById("btn3").style.background = "#fff"
     }else{
         document.getElementById("btn3").disabled = true;
+        document.getElementById("btn3").style.background = "#996666"
     }
 }
 function addcookie()
